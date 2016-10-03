@@ -20,7 +20,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="main-data-center"/>
+    <dubbo:application name="pomegranate"/>
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
     <dubbo:registry protocol="zookeeper" address="ip-172-31-18-229:2181"/>
@@ -29,7 +29,7 @@
     <dubbo:protocol name="dubbo" port="20880" /> -->
     <dubbo:protocol name="dubbo" port="-1"/>
 
-    <dubbo:service interface="com.fruit.service.api.AccountRemoteService" ref="accountService"/>
-    <dubbo:service interface="com.fruit.service.api.CorporationRemoteService" ref="corporationService"/>
+    <dubbo:service interface="com.fruit.pomegranate.service.api.AccountRemoteService" ref="accountService"/>
+    <dubbo:service interface="com.fruit.pomegranate.service.api.CorporationRemoteService" ref="corporationService"/>
 
 </beans>
